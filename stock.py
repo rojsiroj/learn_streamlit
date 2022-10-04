@@ -18,7 +18,7 @@ c1, c2 = st.columns(2)
 
 with c1:
     st.header("Chart (%s) - %s" % (tickerSymbol, selectPeriod))
-    st.line_chart(tickerDf['Close'])
+    st.line_chart(tickerDf[['Close', 'Open']])
 
 with c2:
     st.header("Dataframe (%s) - %s" % (tickerSymbol, selectPeriod))
